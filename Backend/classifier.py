@@ -28,12 +28,17 @@ category_values = {
 train_x = [
     # REMEMBERING (Keywords: list, define, recall, state, identify)
     "Define the term 'photosynthesis'", 
-    "List the stages of mitosis",
-    "Identify the capital city of Japan",
-    "Recall the name of the 16th U.S. President",
-    "State the three laws of motion",
+    "List the stages of mitosis", 
+    "Identify the capital city of Japan", 
+    "Recall the name of the 16th U.S. President", 
+    "State the three laws of motion", 
     "What is the boiling point of water?",
-    
+    "Identify the chemical formula for water", 
+    "Define the theory of relativity",
+    "State the first law of thermodynamics", 
+    "Recall the main characters in 'To Kill a Mockingbird'", 
+    "List the names of all planets in the solar system", 
+    "Identify the tallest mountain in the world",
 
     # UNDERSTANDING (Keywords: summarize, explain, interpret, classify, describe)
     "Summarize the main events of World War II", 
@@ -42,6 +47,12 @@ train_x = [
     "Interpret the meaning of the poem", 
     "Classify the different types of rocks", 
     "Explain how photosynthesis works in plants",
+    "Summarize the causes of the Great Depression", 
+    "Explain the significance of the Magna Carta", 
+    "Describe how seasons change on Earth", 
+    "Classify the different types of government systems", 
+    "Interpret the message of Martin Luther King Jr.'s speech", 
+    "Explain how vaccines work in the human body",
 
     # APPLYING (Keywords: solve, use, demonstrate, apply, implement)
     "Solve this quadratic equation", 
@@ -50,6 +61,12 @@ train_x = [
     "Demonstrate how to tie a knot", 
     "Implement the formula to calculate compound interest", 
     "Solve a real-world problem using algebraic expressions",
+    "Apply the Pythagorean theorem to find the length of the hypotenuse", 
+    "Demonstrate the steps for creating a simple website", 
+    "Use the periodic table to predict the reactivity of an element", 
+    "Apply the principles of aerodynamics to explain how planes fly", 
+    "Solve for x in the equation: 2x + 3 = 7", 
+    "Use a map to determine the shortest driving route between two cities",
 
     # ANALYZING (Keywords: compare, contrast, examine, differentiate, analyze)
     "Compare the leadership styles of two presidents", 
@@ -58,6 +75,12 @@ train_x = [
     "Differentiate between renewable and non-renewable energy sources", 
     "Analyze the similarities and differences between socialism and capitalism", 
     "Examine the author's use of symbolism in the text",
+    "Compare and contrast the properties of metals and non-metals", 
+    "Analyze the reasons behind the stock market crash of 1929", 
+    "Differentiate between similes and metaphors in the poem", 
+    "Examine the causes and effects of the American Civil War", 
+    "Analyze the impact of deforestation on biodiversity", 
+    "Compare the benefits and drawbacks of solar and wind energy",
 
     # EVALUATING (Keywords: assess, critique, judge, argue, justify)
     "Assess the effectiveness of the new policy", 
@@ -66,6 +89,12 @@ train_x = [
     "Argue whether electric cars are more sustainable", 
     "Justify the need for stricter environmental regulations", 
     "Evaluate the success of the company’s marketing campaign",
+    "Assess the effectiveness of renewable energy sources compared to fossil fuels", 
+    "Critique the use of technology in modern education", 
+    "Judge the ethical implications of genetic modification", 
+    "Argue for or against the use of nuclear energy", 
+    "Justify the use of military intervention in international conflicts", 
+    "Evaluate the impact of social media on youth culture",
 
     # CREATING (Keywords: design, create, compose, develop, construct)
     "Design a new logo for the company", 
@@ -73,35 +102,52 @@ train_x = [
     "Compose a piece of music inspired by nature", 
     "Develop a mobile app to track fitness goals", 
     "Construct a model of a sustainable city", 
-    "Write a story about a hero overcoming adversity"
+    "Write a story about a hero overcoming adversity",
+    "Design an experiment to test the effects of different fertilizers on plant growth", 
+    "Create a storyboard for a short film about climate change", 
+    "Invent a new product that could solve everyday household problems", 
+    "Compose a poem about the beauty of nature", 
+    "Develop a business plan for a startup company", 
+    "Write a song expressing gratitude"
 ]
 
 train_y = [
     # REMEMBERING
     BloomCategory.REMEMBERING, BloomCategory.REMEMBERING, BloomCategory.REMEMBERING,
     BloomCategory.REMEMBERING, BloomCategory.REMEMBERING, BloomCategory.REMEMBERING,
+    BloomCategory.REMEMBERING, BloomCategory.REMEMBERING, BloomCategory.REMEMBERING,
+    BloomCategory.REMEMBERING, BloomCategory.REMEMBERING, BloomCategory.REMEMBERING,
 
     # UNDERSTANDING
+    BloomCategory.UNDERSTANDING, BloomCategory.UNDERSTANDING, BloomCategory.UNDERSTANDING,
+    BloomCategory.UNDERSTANDING, BloomCategory.UNDERSTANDING, BloomCategory.UNDERSTANDING,
     BloomCategory.UNDERSTANDING, BloomCategory.UNDERSTANDING, BloomCategory.UNDERSTANDING,
     BloomCategory.UNDERSTANDING, BloomCategory.UNDERSTANDING, BloomCategory.UNDERSTANDING,
 
     # APPLYING
     BloomCategory.APPLYING, BloomCategory.APPLYING, BloomCategory.APPLYING,
     BloomCategory.APPLYING, BloomCategory.APPLYING, BloomCategory.APPLYING,
+    BloomCategory.APPLYING, BloomCategory.APPLYING, BloomCategory.APPLYING,
+    BloomCategory.APPLYING, BloomCategory.APPLYING, BloomCategory.APPLYING,
 
     # ANALYZING
+    BloomCategory.ANALYZING, BloomCategory.ANALYZING, BloomCategory.ANALYZING,
+    BloomCategory.ANALYZING, BloomCategory.ANALYZING, BloomCategory.ANALYZING,
     BloomCategory.ANALYZING, BloomCategory.ANALYZING, BloomCategory.ANALYZING,
     BloomCategory.ANALYZING, BloomCategory.ANALYZING, BloomCategory.ANALYZING,
 
     # EVALUATING
     BloomCategory.EVALUATING, BloomCategory.EVALUATING, BloomCategory.EVALUATING,
     BloomCategory.EVALUATING, BloomCategory.EVALUATING, BloomCategory.EVALUATING,
+    BloomCategory.EVALUATING, BloomCategory.EVALUATING, BloomCategory.EVALUATING,
+    BloomCategory.EVALUATING, BloomCategory.EVALUATING, BloomCategory.EVALUATING,
 
     # CREATING
     BloomCategory.CREATING, BloomCategory.CREATING, BloomCategory.CREATING,
+    BloomCategory.CREATING, BloomCategory.CREATING, BloomCategory.CREATING,
+    BloomCategory.CREATING, BloomCategory.CREATING, BloomCategory.CREATING,
     BloomCategory.CREATING, BloomCategory.CREATING, BloomCategory.CREATING
 ]
-
 
 # Load BERT tokenizer and model
 tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
